@@ -13,11 +13,11 @@ app.use(express.json());
 app.use(cors())
 
 //routes
+app.get('/',(req,res)=>res.send('Hello Welcome to Port 8080'));
 app.use("/api/users",userRoute);
 app.use("/api/auth",authRoute);
 
 
-app.get('/',(req,res)=>res.send('Hello Welcome to Port 8080'));
 
 app.listen(8080,async()=>{
     try{
